@@ -1,3 +1,18 @@
+# =========================
+# User Setting
+# =========================
+
+# File
+*.pyc
+*.dpl
+
+# Directory
+build
+dist
+source/potplayer
+potplayer.egg-info
+
+# =========================
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
