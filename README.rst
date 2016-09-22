@@ -1,23 +1,33 @@
-Welcome to the potplayer Documentation
-===================================================================================================
+.. image:: https://travis-ci.org/MacHu-GWU/potplayer-project.svg?branch=master
 
-A tools to manipulate `potplayer <https://potplayer.daum.net/>`_ playlist.
+.. image:: https://img.shields.io/pypi/v/potplayer.svg
 
-Potplayer is a popular/powerful universal format video player in windows. ``potplayer`` provide a programmatic way to play with PotPlayer.
+.. image:: https://img.shields.io/pypi/l/potplayer.svg
+
+.. image:: https://img.shields.io/pypi/pyversions/potplayer.svg
 
 
-**Quick links**:
+Welcome to potplayer Documentation
+===============================================================================
+**Call a media player to play some video/music from Python is Pain!**
 
+`Pot Player <https://potplayer.daum.net/>`_ is a universal media player software for windows. And the pot player playlist (*.dpl) file is a pure text file to manipulate playlist.
+
+Now with ``potplayer``
+
+**Quick Links**
+-------------------------------------------------------------------------------
 - `GitHub Homepage <https://github.com/MacHu-GWU/potplayer-project>`_
-- `Online Documentation <https://pypi.python.org/pypi/potplayer>`_
+- `Usage <usage_>`_
 - `PyPI download <https://pypi.python.org/pypi/potplayer>`_
 - `Install <install_>`_
 - `Issue submit and feature request <https://github.com/MacHu-GWU/potplayer-project/issues>`_
-- `API reference and source code <http://www.wbh-doc.com.s3.amazonaws.com/potplayer/py-modindex.html>`_
+- `API reference and source code <http://pythonhosted.org/potplayer/py-modindex.html>`_
 
+.. _usage:
 
 **Usage**
-
+-------------------------------------------------------------------------------
 The main usage is to manipulate **video/audio/image** play list:
 
 .. code-block:: python
@@ -36,13 +46,12 @@ You can also use ``run()`` and ``kill()`` method to open anything with PotPlayer
 	>>> potplayer.run("play.dpl") # open a play list, of course you can use this with a video
 	>>> potplayer.kill() # kill all running PotPlayer process
 
-You can find the test at ``site-packages/potplayer/tests``.
-
 
 .. _install:
 
 Install
----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
 ``potplayer`` is released on PyPI, so all you need is:
 
 .. code-block:: console
@@ -52,7 +61,5 @@ Install
 To upgrade to latest version:
 
 .. code-block:: console
-	
-	$ pip install --upgrade potplayer
 
-``potplayer`` doesn't force user to install all pre-requisite third party packages. You can install it when you see the error message and when you need it.
+	$ pip install --upgrade potplayer

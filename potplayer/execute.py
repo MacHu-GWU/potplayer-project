@@ -9,13 +9,11 @@ import subprocess
 # This is your custom path to PotPlayer executable file.
 EXECUTABLE_PATH = None
 
+
 def find_executable():
     """Automatically find PotPlayer executable file path and process name.
     It depends on your system.
     """
-    execute_file = os.path.join(
-        site.getsitepackages()[1], "potplayer", "execute.py")
-
     x86 = r"C:\Program Files (x86)\DAUM\PotPlayer\PotPlayerMini.exe"
     x64 = r"C:\Program Files\DAUM\PotPlayer\PotPlayerMini64.exe"
     if os.path.exists(x86):
@@ -33,15 +31,18 @@ def find_executable():
             raise ValueError("Cannot find potplayer executable! "
                              "Please edit '%s' to add the valid path.")
 
+
 def run(path):
     """Open a playlist/a video/a audio/a image with PotPlayer.
+    Python will pause while potplayer is playing.
     """
     executable, _ = find_executable()
     abspath = os.path.abspath(path)
     subprocess.call('"%s" "%s"' % (executable, abspath))
 
+
 def kill():
-    """Kill PotPlayer.
+    """Kill PotPlayer. Find the subprocess in task manager and kill it.
     """
     _, process_name = find_executable()
     subprocess.call("TASKKILL /F /IM %s" % process_name)

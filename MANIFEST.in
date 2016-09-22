@@ -1,2 +1,2 @@
-include readme.rst long_description.rst LICENSE.txt requirements.txt
+include README.rst LICENSE.txt requirements.txt release-history.rst
 recursive-include potplayer *.*
