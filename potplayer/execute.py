@@ -38,11 +38,13 @@ def run(path):
     """
     executable, _ = find_executable()
     abspath = os.path.abspath(path)
-    subprocess.call('"%s" "%s"' % (executable, abspath))
+    cmd = '"%s" "%s"' % (executable, abspath)
+    subprocess.Popen(cmd)
 
 
 def kill():
     """Kill PotPlayer. Find the subprocess in task manager and kill it.
     """
     _, process_name = find_executable()
-    subprocess.call("TASKKILL /F /IM %s" % process_name)
+    cmd = "TASKKILL /F /IM %s" % process_name
+    subprocess.call(cmd)
